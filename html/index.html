@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../lib/jquery.fullPage.min.css">
+	<style>
+		#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+		#menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+		#menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
+		#menu .active a { color: #fff; background-color: #333;}
+		.section { text-align: center; font: 50px "Microsoft Yahei"; color: #000;}
+	</style>
+	<!-- 
+	插件第一步：先将需要引入的文件引入到自己的项目里面来
+		fullpage这款插件是一个依赖于JQ的一个插件
+		有三个核心文件需要引入
+		（1）fullpage.css fullpage的核心css文件
+		（2）JQUERY 因为fullpage是依赖于JQUERY，所以需要先引JQ包
+		（3）fullpage.js fullpage的核心JS文件 
+	插件第二步：复制fullpage的默认骨架
+	插件第三步：初始化JS 
+	插件第四步：配置参数-->
+</head>
+<body>
+	<ul id="menu">
+		<!-- data-menuanchor 绑定active的 关联哈希值 哈希值是多少就给谁添加active这个类，锚点 必须跟锚点一一对应 点击跳转的-->
+		<li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+		<li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+		<li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+		<li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+	</ul>
+	<!-- 基本的骨架 -->
+	<div id="box">
+	    <div class="section">
+	        <h3>第一屏</h3>
+	    </div>
+	    <div class="section">
+	        <h3>第二屏</h3>
+	    </div>
+	    <div class="section">
+	        <h3>第三屏</h3>
+	    </div>
+	    <div class="section">
+	        <h3>第四屏</h3>
+	    </div>
+	</div>
+
+
+	<script src="../lib/jquery-1.11.3.min.js"></script>
+	<script src="../lib/jquery.fullPage.min.js"></script>
+	<script src="../js/index.js"></script>
+</body>
+</html>
